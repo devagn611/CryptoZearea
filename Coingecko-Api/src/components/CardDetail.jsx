@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CardChart from "./CardChart";
+import CardChart from "./Cardchart";
 import {
   FaCaretUp,
   FaCaretDown,
