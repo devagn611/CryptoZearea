@@ -7,13 +7,13 @@ import {
   FaChartLine,
   FaCoins,
 } from "react-icons/fa";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; 
 
 export default function CardDetail({ coinId }) {
   const [coinData, setCoinData] = useState(null);
   const [chartData, setChartData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchCoinData = async () => {
@@ -22,7 +22,7 @@ export default function CardDetail({ coinId }) {
           `https://crypto-zearea-api.vercel.app/fetch-all-details?ids=${coinId}`
         );
         const data = await response.json();
-        setCoinData(data[0]); // Assuming data returns an array
+        setCoinData(data[0]); 
       } catch (error) {
         console.error("Error fetching coin details:", error);
       } finally {
@@ -36,7 +36,7 @@ export default function CardDetail({ coinId }) {
           `http://localhost:3000/fetch-chart-data?coin=${coinId}`
         );
         const data = await response.json();
-        setChartData(data); // Store the chart data
+        setChartData(data); 
       } catch (error) {
         console.error("Error fetching chart data:", error);
       }
