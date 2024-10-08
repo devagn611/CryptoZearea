@@ -13,7 +13,7 @@ export default function Searchcoin() {
       isLoading(true);
       try {
         const response = await fetch(
-          `http://localhost:3000/search-coin?query=${searchQuery}`
+          `https://crypto-zearea-api.vercel.app/search-coin?query=${searchQuery}`
         );
         const data = await response.json();
         setCoinData(data.coins);
