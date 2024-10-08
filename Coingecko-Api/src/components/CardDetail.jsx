@@ -33,7 +33,7 @@ export default function CardDetail({ coinId }) {
     const fetchChartData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/fetch-chart-data?coin=${coinId}`
+          `https://crypto-zearea-api.vercel.app/fetch-chart-data?coin=${coinId}`
         );
         const data = await response.json();
         setChartData(data); 
