@@ -11,7 +11,7 @@ export default function Home() {
     const fetchApi = async () => {
       isLoading(true);
       try {
-        const response = await fetch('http://localhost:3000/fetch-trending');
+        const response = await fetch('https://crypto-zearea-api.vercel.app/fetch-trending');
         const data = await response.json();
         setCoinData(data.coins);
         isLoading(false);
