@@ -19,7 +19,7 @@ export default function CardDetail({ coinId }) {
     const fetchCoinData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/fetch-all-details?ids=${coinId}`
+          `https://crypto-zearea-api.vercel.app/fetch-all-details?ids=${coinId}`
         );
         const data = await response.json();
         setCoinData(data[0]); // Assuming data returns an array
